@@ -148,6 +148,13 @@ section
     object-fit: cover;
 }
 
+.cover2
+{
+    padding-top: 30px;
+    width: 400px;
+    height: 250px;
+}
+
 .banner
 {
     min-height: 100vh;
@@ -237,7 +244,7 @@ section
 .title p
 {
     margin-top: 40px;
-    max-width: 700px;
+    max-width: 80%;
     text-align: center;
 }
 
@@ -260,19 +267,66 @@ p
     text-align: justify;
 }
 
-.intro .contentBx
+
+.messages
 {
-    position: relative;
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    min-height: 60vh;
+    max-width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    color: white;
 }
 
-.intro .contentBx .content
+#bot
 {
     position: relative;
+    border-radius: 0px 10px 10px 10px;
+    margin-right: auto;
+    background-color: #777777;
+    max-width: 80%;
+}
+
+#bot::before
+{
+    left: -0.5vw;
+    top: 0px;
+    content: "";
+    border-bottom: 0.7vw solid transparent;
+    border-right: 0.7vw solid #777777;
+    position: absolute;
+}
+
+#user
+{
+    position: relative;
+    border-radius: 10px 0px 10px 10px;
+    margin-left: auto;
+    background-color: #5696aa;
+    max-width: 80%;
+}
+
+#user::before
+{
+    right: -0.5vw;
+    top: 0px;
+    content: "";
+    border-bottom: 0.7vw solid transparent;
+    border-left: 0.7vw solid #5696aa;
+    position: absolute;
+}
+
+.response
+{
+    display: flex;
+    margin: 1vw 2vw;
+    padding: 5px 10px;
+}
+
+.msg
+{
+    text-align: start;
+    margin-right: 50px;  
 }
 
 .team {
@@ -361,14 +415,11 @@ footer .footerMenu li a
         padding: 40px 30px;
     }
 
-    .intro .contentBx
+    .cover2
     {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .intro .contentBx .content .cover
-    {
-        position: inherit;
+        padding-top: 30px;
+        width: 200px;
+        height: 150px;
     }
 
     .team .people 

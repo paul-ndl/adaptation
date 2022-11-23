@@ -6,7 +6,9 @@
     <title>ADA Project 2022</title>
     <link rel="shortcut icon" href="resources/icon.png" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="script.js"></script>
+    <script src="plotly1.js"></script>
 </head>
 
 <body>
@@ -36,22 +38,16 @@
     <section class="intro" id="intro">
         <div class="title">
             <h2>Introduction</h2>
-        </div>
-        <div class="contentBx">
-            <div class="content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at tincidunt ipsum. Vivamus vel orci quis enim fringilla mattis at id magna. Nam consequat, tellus in elementum rhoncus, lorem lectus sollicitudin nibh, id cursus urna justo accumsan magna. Sed fringilla suscipit ipsum eget semper. In id magna metus. Praesent lacinia tempus elit vitae efficitur. Duis egestas accumsan mi luctus lacinia. Morbi consequat, nunc vel ullamcorper placerat, quam nisi sollicitudin tellus, ut malesuada nibh sapien ultrices velit. Cras id pellentesque purus. Nullam ultricies eu tellus in mollis. Donec eget ipsum ut arcu ultricies commodo pellentesque vitae ex. Sed lobortis scelerisque laoreet. In nunc tellus, efficitur in metus eu, aliquet pellentesque purus. Ut in dui vitae sem tincidunt ultricies tristique sed nisi. Duis elementum mi nec leo ullamcorper vulputate vel vel nibh.
-                    <br><br>
-                    Aenean molestie mi nec rhoncus finibus. Cras facilisis, mi in ultricies iaculis, velit tortor bibendum ante, nec dapibus velit mauris in eros. In a lorem lacinia, tincidunt erat et, molestie lectus. Quisque pharetra convallis tellus, eu pulvinar ante lacinia quis. Duis varius, enim et porta mattis, ipsum erat bibendum metus, eu viverra nisl nunc non ipsum. Curabitur cursus ac nibh eget porttitor. Nunc tempor, dui ut fringilla luctus, velit nisi iaculis magna, ac ullamcorper diam nisl id risus. Nulla et dignissim quam. Pellentesque in aliquam augue, vel vestibulum mauris. Curabitur iaculis turpis id malesuada suscipit.
-                    <br><br>
-                    Fusce semper lacinia lobortis. Sed pellentesque semper magna. Vestibulum tellus elit, finibus sed aliquet ac, scelerisque ac mi. Nulla eu tempor quam. Aliquam ac dolor sollicitudin, sodales sapien in, fermentum erat. Morbi hendrerit, elit eget rutrum posuere, diam lectus dapibus felis, eu tempus sem est sed justo. Nulla odio dui, semper at dui eget, mollis suscipit risus. Phasellus aliquet lorem quam, sed viverra leo mollis ut. Nulla facilisi. Praesent aliquet est vestibulum augue pharetra, quis pharetra massa vulputate. Nam condimentum lacus a sem convallis mattis.
-                </p>
-            </div>
-            <div class="content">
-                <div class="imageBx">
-                    <img src="resources/youtube.jpg" class="cover">
-                </div>
-            </div>
+            <img src="resources/yt-trophies.png" class="cover2">
+            <p>
+                    Path towards Fame: To-Do’s and Not-To-Do’s for new YouTubers
+                    <br/>
+                    This project intends to investigate the key(s) to success in becoming a renowned YouTuber. 
+                    We want to highlight past trends and patterns in order to understand what factors play into a success story and what it takes in terms of time spent and effort to establish a new channel as a one person Youtuber.
+                    We know that different audiences of different categories require specific treatment.
+                    Therefore, we first explore the entire dataset on a surface level before focusing on a handful of categories in our preliminary analysis to identify a possible gap with the most potential for a young person to become a renowned YouTuber.
+                    By investigating the key(s) to success we want to emphasize what is necessary with respect to commitment and volume to gain subscriptions, views and likes.
+            </p>
         </div>
     </section>
 
@@ -59,20 +55,39 @@
     <section class="analysis" id="analysis">
         <div class="title">
             <h2>Analysis</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis dicta possimus qui maxime cum corrupti
-                iste! Voluptates modi distinctio non alias beatae fuga necessitatibus facere.</p>
+            <p>
+                To start with, we conducted the following analysis to have an idea about the attributes that could have importance on the Youtubers’ success. The results of this section are used to select an appropriate subset of the sample and to determine which aspects of the YouNiverse dataset we dig deeper into.
+            </p>
         </div>
-        <div class="contentBx">
-            
+        <div id="messages" class="messages">
+            <div id="bot" class="bot response">
+                <div class="msg">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            <div id="user" class="user response">
+                <div class="msg">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <div id="myPlot" style="width:100%;max-width:700px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <p>
+                Given the results in Part 1 of our asnalysis, we decided to focus on the categories of Gaming, People & Blogs, Comedy. The reason behind this choice is because we are trying to help our little brother to succeed, and since he is just a single person without a big team behind him it seems more reasonable than e.g. Movies or Film & Entertainment. Therefore, we decided to eliminate Music, How-to & Style, Education, Science & Technology, Entertainment, Film & Entertainment, Movies and Shows. We decided to investigate the three categories mentioned above also because videos uploaded can be addressed to audiences of all three categories.    
+            </p>
         </div>
     </section>
+
+    
 
     <!-- Team -->
     <section class="team" id="team">
         <div class="title">
             <h2>Team</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aperiam incidunt iusto omnis,
-                totam provident beatae quos eius animi esse commodi facilis necessitatibus voluptas fugiat.</p>
+            <p>
+                Here are the members of the Team ADAptation for the ADA Project 2022!
+            </p>
         </div>
         <div>
             <div class="people">
