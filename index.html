@@ -6,6 +6,7 @@
     <title>ADA Project 2022</title>
     <link rel="shortcut icon" href="resources/icon.png" />
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="book.css"/>
     <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="script.js"></script>
@@ -21,8 +22,8 @@
     <ul class="navigation">
         <li><a href="#home" onclick="toggleMenu();">Home</a></li>
         <li><a href="#intro" onclick="toggleMenu();">Introduction</a></li>
-        <li><a href="#numbers" onclick="toggleMenu();">Key numbers</a></li>
         <li><a href="#analysis" onclick="toggleMenu();">Analysis</a></li>
+        <li><a href="#numbers" onclick="toggleMenu();">Key numbers</a></li>
         <li><a href="#team" onclick="toggleMenu();">Team</a></li>
     </ul>
 
@@ -52,6 +53,116 @@
                     Therefore, we first explore the entire dataset on a surface level before focusing on a handful of categories in our preliminary analysis to identify a possible gap with the most potential for a young person to become a renowned YouTuber.
                     By investigating the key(s) to success we want to emphasize what is necessary with respect to commitment and volume to gain subscriptions, views and likes.
             </p>
+        </div>
+    </section>
+
+    <!-- Analysis -->
+    <section class="analysis" id="analysis">
+        <div class="title">
+            <h2>Analysis</h2>
+            <p>
+                To start with, we conducted the following analysis to have an idea about the attributes that could have importance on the Youtubers’ success. The results of this section are used to select an appropriate subset of the sample and to determine which aspects of the YouNiverse dataset we dig deeper into.
+            </p>
+
+            <div class="book">
+                <input type="checkbox" id="c1">
+                <input type="checkbox" id="c2">
+                <input type="checkbox" id="c3">
+                <div id="cover">
+                    <p>Cover</p>
+                </div>
+                <div class="flip-book">
+                    <div class="flip" id="p1">
+                        <div class="back">
+                            <p>Page 2</p>
+                            <label  for="c1" class="back-btn">&#60;</label>
+                        </div>
+                        <div class="front">
+                            <p>
+                                Data Story
+                                <br>
+                                Chapter 1
+                            </p>
+                            <label for="c1" class="next-btn">&#62;</label>
+                        </div>
+                    </div>
+        
+                    <div class="flip" id="p2">
+                        <div class="back">
+                            <p>Page 4</p>
+                            <label for="c2" class="back-btn">&#60;</label>
+                        </div>
+                        <div class="front">
+                            <p>Page 3</p>
+                            <label for="c2" class="next-btn">&#62;</label>
+                        </div>
+                    </div>
+                    
+                    <div class="flip" id="p3">
+                        <div class="back">
+                            <p>Page 6</p>
+                            <label for="c3" class="back-btn">&#60;</label>
+                        </div>
+                        <div class="front">
+                            <p>Page 5</p>
+                            <label for="c3" class="next-btn">&#62;</label>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            
+            <p>
+                Given the results in Part 1 of our asnalysis, we decided to focus on the categories of Gaming, People & Blogs, Comedy. The reason behind this choice is because we are trying to help our little brother to succeed, and since he is just a single person without a big team behind him it seems more reasonable than e.g. Movies or Film & Entertainment. Therefore, we decided to eliminate Music, How-to & Style, Education, Science & Technology, Entertainment, Film & Entertainment, Movies and Shows. We decided to investigate the three categories mentioned above also because videos uploaded can be addressed to audiences of all three categories.    
+            </p>
+
+            <div class="book">
+                <input type="checkbox" id="c11">
+                <input type="checkbox" id="c12">
+                <input type="checkbox" id="c13">
+                <div id="cover">
+                    <p>Cover</p>
+                </div>
+                <div class="flip-book">
+                    <div class="flip" id="p11">
+                        <div class="back">
+                            <p>Page 2</p>
+                            <label  for="c11" class="back-btn">&#60;</label>
+                        </div>
+                        <div class="front">
+                            <p>
+                                Data Story
+                                <br>
+                                Chapter 2
+                            </p>
+                            <label for="c11" class="next-btn">&#62;</label>
+                        </div>
+                    </div>
+        
+                    <div class="flip" id="p12">
+                        <div class="back">
+                            <p>Page 4</p>
+                            <label for="c12" class="back-btn">&#60;</label>
+                        </div>
+                        <div class="front">
+                            <p>Page 3</p>
+                            <label for="c12" class="next-btn">&#62;</label>
+                        </div>
+                    </div>
+                    
+                    <div class="flip" id="p13">
+                        <div class="back">
+                            <p>Page 6</p>
+                            <label for="c13" class="back-btn">&#60;</label>
+                        </div>
+                        <div class="front">
+                            <p>Page 5</p>
+                            <label for="c13" class="next-btn">&#62;</label>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
         </div>
     </section>
 
@@ -87,34 +198,6 @@
             <div class="legend">videos</div>
             <div class="legend">channels</div>
             <div class="legend">years of data</div>
-        </div>
-    </section>
-
-    <!-- Analysis -->
-    <section class="analysis" id="analysis">
-        <div class="title">
-            <h2>Analysis</h2>
-            <p>
-                To start with, we conducted the following analysis to have an idea about the attributes that could have importance on the Youtubers’ success. The results of this section are used to select an appropriate subset of the sample and to determine which aspects of the YouNiverse dataset we dig deeper into.
-            </p>
-        </div>
-        <div id="messages" class="messages">
-            <div id="bot" class="bot response">
-                <div class="msg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-            </div>
-            <div id="user" class="user response">
-                <div class="msg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    <div id="myPlot" style="width:100%;max-width:700px"></div>
-                </div>
-            </div>
-        </div>
-        <div class="title">
-            <p>
-                Given the results in Part 1 of our asnalysis, we decided to focus on the categories of Gaming, People & Blogs, Comedy. The reason behind this choice is because we are trying to help our little brother to succeed, and since he is just a single person without a big team behind him it seems more reasonable than e.g. Movies or Film & Entertainment. Therefore, we decided to eliminate Music, How-to & Style, Education, Science & Technology, Entertainment, Film & Entertainment, Movies and Shows. We decided to investigate the three categories mentioned above also because videos uploaded can be addressed to audiences of all three categories.    
-            </p>
         </div>
     </section>
 
@@ -158,8 +241,8 @@
         <ul class="footerMenu">
             <li><a href="#home">Home</a></li>
             <li><a href="#intro">Introduction</a></li>
-            <li><a href="#numbers">Key numbers</a></li>
             <li><a href="#analysis">Analysis</a></li>
+            <li><a href="#numbers">Key numbers</a></li>
             <li><a href="#team">Team</a></li>
         </ul>
         <p class="copyrightText">Copyright &#169; 2022. All right Reserved</p>
