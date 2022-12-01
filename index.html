@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADA Project 2022</title>
     <link rel="shortcut icon" href="resources/icon.png" />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="script.js"></script>
     <script src="plotly1.js"></script>
@@ -20,17 +21,20 @@
     <ul class="navigation">
         <li><a href="#home" onclick="toggleMenu();">Home</a></li>
         <li><a href="#intro" onclick="toggleMenu();">Introduction</a></li>
+        <li><a href="#numbers" onclick="toggleMenu();">Key numbers</a></li>
         <li><a href="#analysis" onclick="toggleMenu();">Analysis</a></li>
         <li><a href="#team" onclick="toggleMenu();">Team</a></li>
     </ul>
 
     <!-- Banner -->
     <section class="banner" id="home">
-        <img src="resources/banner.gif" class="cover">
+        <img src="resources/background.jpg" class="cover">
         <div class="contentBx">
-            <h2>ADA Project 2022</h2>
+            <img src="resources/youniverse.png" class="dlab">
+            <h2>Path towards Fame:</h2>
+            <h2>To-Do’s and Not-To-Do’s for new YouTubers</h2>
             <h4>Team ADAptation | YouNiverse Dataset</h4>
-            <a href="#intro" class="btn">Introduction</a>
+            <a href="#intro" class="btn">Start story now!</a>
         </div>
     </section>
 
@@ -48,6 +52,41 @@
                     Therefore, we first explore the entire dataset on a surface level before focusing on a handful of categories in our preliminary analysis to identify a possible gap with the most potential for a young person to become a renowned YouTuber.
                     By investigating the key(s) to success we want to emphasize what is necessary with respect to commitment and volume to gain subscriptions, views and likes.
             </p>
+        </div>
+    </section>
+
+    <!-- Key numbers -->
+    <section class="numbers" id="numbers">
+        <div class="title">
+            <h2>Key numbers</h2>
+        </div>
+        <div class="nums">
+            <span data-purecounter-start="0" 
+                data-purecounter-end="72924794"
+                data-purecounter-duration="1"
+                data-purecounter-delay="5"
+                class="purecounter">
+                0
+            </span>
+            <span data-purecounter-start="0" 
+                data-purecounter-end="136470"
+                data-purecounter-duration="1"
+                data-purecounter-delay="5"
+                class="purecounter">
+                0
+            </span>
+            <span data-purecounter-start="0" 
+                data-purecounter-end="5"
+                data-purecounter-duration="1"
+                data-purecounter-delay="5"
+                class="purecounter">
+                0
+            </span>
+        </div>
+        <div class="nums">
+            <div class="legend">videos</div>
+            <div class="legend">channels</div>
+            <div class="legend">years of data</div>
         </div>
     </section>
 
@@ -119,6 +158,7 @@
         <ul class="footerMenu">
             <li><a href="#home">Home</a></li>
             <li><a href="#intro">Introduction</a></li>
+            <li><a href="#numbers">Key numbers</a></li>
             <li><a href="#analysis">Analysis</a></li>
             <li><a href="#team">Team</a></li>
         </ul>
@@ -126,8 +166,13 @@
     </footer>
 
     <script>
+        new PureCounter();
         const menuToggle = document.querySelector('.menuToggle');
         const navigation = document.querySelector('.navigation');
+        let nums = document.querySelectorAll(".nums .num");
+        let section = document.querySelector(".numbers");
+        let started = false;
+
         menuToggle.onclick = function () {
             menuToggle.classList.toggle('active');
             navigation.classList.toggle('active');
