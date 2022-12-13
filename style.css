@@ -282,7 +282,7 @@ section
     transform: translateX(-50%);
     width: 40px;
     height: 6px;
-    background: black;
+    background: #bd4954;
 }
 
 p
@@ -310,73 +310,6 @@ p
     flex: 1;
     text-align: center;
     padding: 0 20px 20px 20px;
-}
-
-
-.messages
-{
-    max-width: 80%;
-    margin-left: 10%;
-    display: flex;
-    flex-direction: column;
-    background-color: #f8f8f8;
-    color: white;
-}
-
-#bot
-{
-    position: relative;
-    border-radius: 0px 10px 10px 10px;
-    margin-right: auto;
-    background-color: #777777;
-    max-width: 80%;
-}
-
-#bot::before
-{
-    left: -0.5vw;
-    top: 0px;
-    content: "";
-    border-bottom: 0.7vw solid transparent;
-    border-right: 0.7vw solid #777777;
-    position: absolute;
-}
-
-#user
-{
-    position: relative;
-    border-radius: 10px 0px 10px 10px;
-    margin-left: auto;
-    background-color: #5696aa;
-    max-width: 80%;
-}
-
-#user::before
-{
-    right: -0.5vw;
-    top: 0px;
-    content: "";
-    border-bottom: 0.7vw solid transparent;
-    border-left: 0.7vw solid #5696aa;
-    position: absolute;
-}
-
-.response
-{
-    display: flex;
-    margin: 1vw 2vw;
-    padding: 5px 10px;
-}
-
-.msg
-{
-    text-align: start;
-    margin-right: 50px;  
-}
-
-.team {
-    display: table;
-    padding-bottom: 50px;
 }
 
 .team .people 

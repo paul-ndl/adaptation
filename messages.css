@@ -1,0 +1,85 @@
+.messages
+{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    color: white;
+}
+
+#brother
+{
+    position: relative;
+    border-radius: 0px 10px 10px 10px;
+    background-color: #bd4954;
+    font-weight: 300;
+    padding: 20px;
+}
+
+#brother::before
+{
+    left: -0.5vw;
+    top: 0px;
+    content: "";
+    border-bottom: 0.7vw solid transparent;
+    border-right: 0.7vw solid #bd4954;
+    position: absolute;
+}
+
+#us
+{
+    position: relative;
+    border-radius: 10px 0px 10px 10px;
+    background-color: #c4c4c4;
+    color: black;
+    font-weight: 300;
+    padding: 20px;
+}
+
+#us::before
+{
+    right: -0.5vw;
+    top: 0px;
+    content: "";
+    border-bottom: 0.7vw solid transparent;
+    border-left: 0.7vw solid #c4c4c4;
+    position: absolute;
+}
+
+.response
+{
+    display: flex;
+    flex-direction: row;
+    margin: 1vw 2vw;
+    padding: 5px 10px;
+}
+
+.msg
+{
+    text-align: start;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-brother
+{
+    left: -60px;
+    top: -10px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.avatar-scientist
+{
+    right: -60px;
+    top: -10px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
