@@ -9,13 +9,23 @@ window.onload=function(){
 
     var my_Div = gd3.node();
     var trace1 = {
-        x: [1, 2, 3, 4],
+        x: ['2011', '2012', '2013', '2014'],
         y: [10, 15, 13, 17],
-        type: 'scatter'
-      };
+        type: 'scatter',
+        mode: 'lines',
+        name: 'Scatter 1'
+    };
+
+    var trace2 = {
+        x: ['2011', '2012', '2013', '2014'],
+        y: [11, 8, 7, 16],
+        type: 'scatter',
+        mode: 'lines',
+        name: 'Scatter 2'
+    };
       
       
-    var data = [trace1];
+    var data = [trace1, trace2];
 
     var layout = {
         title:'Number of videos uploaded each week', 
@@ -31,14 +41,11 @@ window.onload=function(){
             autorange: true,
         },
         font: {size:16 , color: 'black'}, 
-        paper_bgcolor: '#c4c4c4'
+        paper_bgcolor: '#c4c4c4',
+        plot_bgcolor: '#c4c4c4'
     }
             
     Plotly.plot(my_Div, data, layout, {displayModeBar: false});
     		
     window.onresize = function() { Plotly.Plots.resize( my_Div ) };
 }
-
-
-
-		
