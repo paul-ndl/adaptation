@@ -16,7 +16,7 @@
 {
     position: relative;
     border-radius: 0px 10px 10px 10px;
-    background-color: #bd4954;
+    background-color: #00be0d;
     font-weight: 300;
     padding: 20px;
 }
@@ -27,7 +27,7 @@
     top: 0px;
     content: "";
     border-bottom: 0.7vw solid transparent;
-    border-right: 0.7vw solid #bd4954;
+    border-right: 0.7vw solid #00be0d;
     position: absolute;
 }
 
@@ -35,7 +35,7 @@
 {
     position: relative;
     border-radius: 10px 0px 10px 10px;
-    background-color: #c4c4c4;
+    background-color: #e4e4e4;
     color: black;
     font-weight: 300;
     padding: 20px;
@@ -47,7 +47,7 @@
     top: 0px;
     content: "";
     border-bottom: 0.7vw solid transparent;
-    border-left: 0.7vw solid #c4c4c4;
+    border-left: 0.7vw solid #e4e4e4;
     position: absolute;
 }
 
@@ -66,7 +66,38 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+
+.msg img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.msg li 
+{
+    margin-left: 20px;
+}
+
+.msg table 
+{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.msg table, td 
+{
+    border: 1px solid #333;
+}
+
+.msg thead, tfoot 
+{
+    background-color: #333;
+    color: #fff;
 }
 
 .avatar-brother

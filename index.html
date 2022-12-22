@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="script.js"></script>
-    <script src="plotly2.js"></script>
+    <script src="plot1.js"></script>
 </head>
 
 <body>
@@ -23,19 +23,18 @@
     <ul class="navigation">
         <li><a href="#home" onclick="toggleMenu();">Home</a></li>
         <li><a href="#intro" onclick="toggleMenu();">Introduction</a></li>
-        <li><a href="#chapter1" onclick="toggleMenu();">Chapter 1</a></li>
-        <li><a href="#chapter2" onclick="toggleMenu();">Chapter 2</a></li>
+        <li><a href="#analysis" onclick="toggleMenu();">Analysis</a></li>
         <li><a href="#numbers" onclick="toggleMenu();">Key numbers</a></li>
         <li><a href="#team" onclick="toggleMenu();">Team</a></li>
     </ul>
 
     <!-- Banner -->
     <section class="banner" id="home">
-        <img src="resources/background.jpg" class="cover">
+        <img src="resources/gaming-wallpaper.png" class="cover">
         <div class="contentBx">
             <img src="resources/youniverse.png" class="dlab">
-            <h2>Path towards Fame:</h2>
-            <h2>To-Do’s and Not-To-Do’s for new YouTubers</h2>
+            <h2>N (scientifically proven) steps</h2>
+            <h2>on how to become a famous YouTube Gamer</h2>
             <h4>Team ADAptation | YouNiverse Dataset</h4>
             <a href="#intro" class="btn">Start story now!</a>
         </div>
@@ -47,21 +46,24 @@
             <h2>Introduction</h2>
             <img src="resources/yt-trophies.png" class="cover2">
             <p>
-                    Path towards Fame: To-Do’s and Not-To-Do’s for new YouTubers
-                    <br/>
-                    This project intends to investigate the key(s) to success in becoming a renowned YouTuber. 
-                    We want to highlight past trends and patterns in order to understand what factors play into a success story and what it takes in terms of time spent and effort to establish a new channel as a one person Youtuber.
-                    We know that different audiences of different categories require specific treatment.
-                    Therefore, we first explore the entire dataset on a surface level before focusing on a handful of categories in our preliminary analysis to identify a possible gap with the most potential for a young person to become a renowned YouTuber.
-                    By investigating the key(s) to success we want to emphasize what is necessary with respect to commitment and volume to gain subscriptions, views and likes.
+                Playing video games is exciting as they let us experience the thrill of victory and the pain of defeat. However, one of the biggest factors that makes gaming so popular is the fact that it provides entertainment not only the one playing the game but also to others that are watching. While we watch someone showing off their skills, we draw inspiration for our own gaming experience. The act of watching someone show off their gaming skills and playing the games yourself is a natural complement to one another.
+            </p>
+            <p>
+                Over the past decade, YouTube has become one of the top sources for gaming videos of all kinds. It has provided a platform that is easily accessible to many, and its broadcasting and screen recording tools have made it easy to share gaming videos with your audience. While a lot of people watch livestreams on platforms such as Twitch, gamers share their videos to their channels on YouTube to showcase striking tactics or game highlights. At the same time gamers also discuss aspirations for future matches.
+            </p>
+            <p>
+                YouTube gaming influencers have grown increasingly important for the gaming industry as the global gaming market is predicted to reach $197.00bn in 2022 (Statista, 2022). The annual growth rate is expected to be 7.67% (2022-2027), which would increase the market volume to 285.00bn by 2027 (Statista, 2022). Many well-known gamers also venture into different genres like music and fashion. Especially, for younger generations the rise to fame appears very attainable. But what does it actually take to become one of the biggest channels in gaming?
+            </p>
+            <p>
+                In the following, we will highlight trends and tendencies of YouTube gamers and the stats behind their channels and videos to help someone who wants to start a gaming channel on YouTube. In order to understand what the mechanisms behind success are, we take a look at the driving factors of gaining subscribers. We specifically pay attention to the language used in titles and tags to understand if certain sentiments in titles and tags drive better results and whether these relationships change over time.
             </p>
         </div>
     </section>
 
-    <!-- Chapter 1 -->
-    <section class="chapter1" id="chapter1">
+    <!-- Analysis -->
+    <section class="analysis" id="analysis">
         <div class="title">
-            <h2>Chapter 1</h2>
+            <h2>Analysis</h2>
             <p>
                 To start with, we conducted the following analysis to have an idea about the attributes that could have importance on the Youtubers’ success. The results of this section are used to select an appropriate subset of the sample and to determine which aspects of the YouNiverse dataset we dig deeper into.
             </p>
@@ -70,31 +72,291 @@
                 <div id="brother" class="brother response">
                     <img src="resources/brother.png" class="avatar-brother">
                     <div class="msg">
-                        How do YouTubers' weekly content creation patterns differ in terms of frequency, length, and upload time? 
+                        How does the video upload frequency, time of the week, and video length affect the subscription rate of the channels? 
                     </div>
                 </div>
                 <div id="us" class="us response">
                     <img src="resources/scientist.png" class="avatar-scientist">
                     <div class="msg">
-                        <object type="text/html" data="tags.html" width="100%" height="880"></object>
-                        
-                        From the graph above, we can see that the number of videos being uploaded to YouTube has increased steadily since 2005. We want to have a closer look at the number of videos uploaded by each channel to understand how many videos it takes in order to be successfull. For this preliminary analysis, we only consider the number of videos uploaded by each channel per year.
+                        In order to understand, what we need to upload to gain following in the gaming area we need to understand first what sort of content has been put on YouTube thus far. Firstly we take a look at several measures such as upload frequency, time of the week for uploading, and the video length in order to see how this affects the subscription rate of the channels.
+                        <br/>
+                        We used a statistical model to determine what underlying characteristics channels have (see results below). The results from the linear model indicate two statistically significant terms (with significance level of 0.005): upload interval and average video duration. The coefficients of these two terms suggest that:
+                        <ul>
+                            <li>
+                                the higher the upload interval, the lower the subscription rate
+                            </li>
+                            <li>
+                                the higher the average video duration, the lower the subscription rate
+                            </li>
+                        </ul>
+                        What this specifically tells us is that a higher upload frequency of videos may not lead to more subscribers. A similar trend can be observed with video length. If a channel uploads a lot of videos that are extremely long, they most likely will not gain subscribers in this way. As already mentioned above, YouTube gaming content is usually highlights or summaries by gamers but not necessarily an entire recorded live stream of their game, where other platforms are preferred.
+                        <br/>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>Number of Subscribers</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intercept</td>
+                                    <td>-0.1583 (0.698)</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>0.0872 (0.842)</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>0.1919 (0.639)</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>0.1545 (0.705)</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>0.1534 (0.707)</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>0.2544 (0.545)</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>0.1731 (0.764)</td>
+                                </tr>
+                                <tr>
+                                    <td>Upload interval</td>
+                                    <td>-0.0497 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Average video duration</td>
+                                    <td>-0.0263 (0.002**)</td>
+                                </tr>
+                                <tr>
+                                    <td>R&#xB2;</td>
+                                    <td>0.003</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj. R&#xB2;</td>
+                                    <td>0.002</td>
+                                </tr>
+                                <tr>
+                                    <td>No. obs.</td>
+                                    <td>14380</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        What we can also tell you is that the timing of uploading your gaming content to YouTube does not matter as much, when looking at more subscriptions. We see, however, that a lot of people upload content on Thursday, so in case you want to swim against the stream: why not upload any other day than Thursday? &#x1F609;
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Weekday</td>
+                                    <td>Number of Channels</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>1332</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>11394</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>1501</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>101</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="brother" class="brother response">
+                    <img src="resources/brother.png" class="avatar-brother">
+                    <div class="msg">
+                        Do you need to mention certain words in your caption to generate views?
+                    </div>
+                </div>
+                <div id="us" class="us response">
+                    <img src="resources/scientist.png" class="avatar-scientist">
+                    <div class="msg">
+                        The way we phrase titles and what kind of language we use will either speak to a desired audience or it may drive them away. To inform you about the do’s and don’ts in your video titles, we analyzed titles sentiments, meaning an attitude or thought that is prompted by feeling.
+                        <img src="resources/hist.png">
+                        What we found was, that at least in the gaming world, most videos appear to use neutral language. Neither positive nor negative words had a significant impact on view counts of such videos. 
+                        <br/>
+                        Let's now look closer at this by category of videos, since many channels also have videos from categories other than "Gaming".
+                        <div id="plot1"></div>
+                        The heat map plot above shows similar information as the histogram, but for all categories of videos in our data sample. It seems that "Gaming" videos are already among the categories with lowest share of neutral titles.
+                        <br/>
+                        Now, we will further filter a data sample for the purpose of this analysis, such that the share between videos with positive, negative and neutral titles is more or less the same.
+                        <br/>
+                        After filtering, the data sample seems more balanced, for both sentiments and days of the week:
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Weekday</td>
+                                    <td>Number of Videos</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Positive titles</td>
+                                    <td>615479</td>
+                                </tr>
+                                <tr>
+                                    <td>Neutral titles</td>
+                                    <td>615479</td>
+                                </tr>
+                                <tr>
+                                    <td>Negative titles</td>
+                                    <td>615479</td>
+                                </tr>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>258922</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>265411</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>270010</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>268505</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>277740</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>259516</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>246333</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
+                        The baseline of the model is: A video that is being uploaded on Monday, with neutral titles, and median duration.
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>View Counts</td>
+                                    <td>Like Counts</td>
+                                    <td>Dislike Counts</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intercept</td>
+                                    <td>-0.0204 (0.000***)</td>
+                                    <td>-0.0229 (0.000***)</td>
+                                    <td>-0.0194 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>-0.0010 (0.439)</td>
+                                    <td>-0.0009 (0.453)</td>
+                                    <td>-0.0085 (0.969)</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>0.0122 (0.000***)</td>
+                                    <td>0.0017 (0.178)</td>
+                                    <td>9.058e-05 (0.953)</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>0.0068 (0.000***)</td>
+                                    <td>0.0013 (0.286)</td>
+                                    <td>-0.0030 (0.053)</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>0.0101 (0.000***)</td>
+                                    <td>0.0068 (0.000***)</td>
+                                    <td>0.0026 (0.094)</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>0.0260 (0.000***)</td>
+                                    <td>0.0320 (0.000***)</td>
+                                    <td>0.0213 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>0.0059 (0.000***)</td>
+                                    <td>0.0165 (0.000***)</td>
+                                    <td>0.0150 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Positive title</td>
+                                    <td>0.0132 (0.000***)</td>
+                                    <td>0.0140 (0.000***)</td>
+                                    <td>0.0133 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Negative title</td>
+                                    <td>0.0157 (0.000***)</td>
+                                    <td>0.0240 (0.000***)</td>
+                                    <td>0.0285 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Duration</td>
+                                    <td>-0.0178 (0.000***)</td>
+                                    <td>-0.0257 (0.000***)</td>
+                                    <td>-0.0176 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>R&#xB2;</td>
+                                    <td>0.000</td>
+                                    <td>0.001</td>
+                                    <td>0.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj. R&#xB2;</td>
+                                    <td>0.000</td>
+                                    <td>0.001</td>
+                                    <td>0.000</td>
+                                </tr>
+                                <tr>
+                                    <td>No. obs.</td>
+                                    <td>7040768</td>
+                                    <td>6994858</td>
+                                    <td>6994858</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
             
-
-        </div>
-    </section>
-
-    <!-- Chapter 2 -->
-    <section class="chapter2" id="chapter2">
-        <div class="title">
-            <h2>Chapter 2</h2>        
-            <p>
-                Given the results in Part 1 of our asnalysis, we decided to focus on the categories of Gaming, People & Blogs, Comedy. The reason behind this choice is because we are trying to help our little brother to succeed, and since he is just a single person without a big team behind him it seems more reasonable than e.g. Movies or Film & Entertainment. Therefore, we decided to eliminate Music, How-to & Style, Education, Science & Technology, Entertainment, Film & Entertainment, Movies and Shows. We decided to investigate the three categories mentioned above also because videos uploaded can be addressed to audiences of all three categories.    
-            </p>
 
         </div>
     </section>
@@ -174,8 +436,7 @@
         <ul class="footerMenu">
             <li><a href="#home">Home</a></li>
             <li><a href="#intro">Introduction</a></li>
-            <li><a href="#chapter1">Chapter 1</a></li>
-            <li><a href="#chapter2">Chapter 2</a></li>
+            <li><a href="#analysis">Analysis</a></li>
             <li><a href="#numbers">Key numbers</a></li>
             <li><a href="#team">Team</a></li>
         </ul>
