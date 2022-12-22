@@ -1,14 +1,14 @@
-window.onload=function(){
-    var d3 = Plotly.d3;
+function plot1() {
+    var d1 = Plotly.d3;
 
-    var gd3 = d3.select("div[id='plot1']")
+    var gd1 = d1.select("div[id='plot1']")
     .style({
         'width': '100%',
         'margin-top': '3vh',
         'margin-bottom': '5vh'
     });
 
-    var my_Div = gd3.node();
+    var my_Div1 = gd1.node();
     
 
     var xValues = ['Autos & vehicles', 'Comedy', 'Education', 'Entertainment', 'Film & Animation', 'Gaming', 'Howto & Style', 'Music', 'News & Politics', 'Nonprofits & Activism', 'People &  Blogs', 'Pets & Animals', 'Science & Technology', 'Sports', 'Travel & Events'];
@@ -25,7 +25,7 @@ window.onload=function(){
                     [0.02, 0.02, 0.01, 0.02, 0.01, 0.02, 0.02, 0.01, 0.01, 0.02, 0.02, 0.01, 0.02, 0.02, 0.01]];
 
 
-    var data = [{
+    var data1 = [{
         x: xValues,
         y: yValues,
         z: zValues,
@@ -34,7 +34,7 @@ window.onload=function(){
     }];
 
 
-    var layout = {
+    var layout1 = {
         title: 'Sentiment Analysis for Videos: classified by category',
         annotations: [],
         xaxis: {
@@ -72,12 +72,12 @@ window.onload=function(){
                     color: "white"
                 }
             };
-            layout.annotations.push(result);
+            layout1.annotations.push(result);
         }
     }
 
 
-    Plotly.newPlot(my_Div, data, layout);
+    Plotly.newPlot(my_Div1, data1, layout1);
     		
-    window.onresize = function() { Plotly.Plots.resize( my_Div ) };
+    window.onresize = function() { Plotly.Plots.resize(my_Div1) };
 }
