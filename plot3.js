@@ -15,7 +15,7 @@ function plot3() {
     var data3 = [
         {
           x: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-          y: [662848, 284543, 238336, 112883, 87143, 62830, 50617, 39567, 54214, 52017, 91355],
+          y: [1137147, 493490, 420310, 209233, 170436, 127063, 105146, 80171, 110418, 101999, 183773],
           type: 'bar',
           marker: {
             color: '#ec5046'
@@ -27,7 +27,7 @@ function plot3() {
         title:'Distribution of the frequency of capitalize words', 
         barmode: "stack",
         xaxis: {
-            title: 'Frequencies of upper words', 
+            title: 'Frequency of upper words', 
             showgrid: false,
             zeroline: false,
             autorange: true,

@@ -22,7 +22,7 @@ function plot5() {
             values: allValues[0],
             labels: allLabels,
             type: 'pie',
-            title: 'Small channels',
+            title: 'Small channels (<100,000 subscribers)',
             name: 'Small channels',
             domain: {
                 row: 0,
@@ -37,7 +37,7 @@ function plot5() {
             values: allValues[1],
             labels: allLabels,
             type: 'pie',
-            title: 'Big channels',
+            title: 'Big channels(>100,000 subscribers)',
             name: 'Big channels',
             domain: {
                 row: 0,

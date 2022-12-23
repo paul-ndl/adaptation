@@ -17,6 +17,7 @@
     <script src="plot3.js"></script>
     <script src="plot4.js"></script>
     <script src="plot5.js"></script>
+    <script src="plot6.js"></script>
 </head>
 
 <body>
@@ -95,7 +96,7 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <td></td>
+                                    <td>Parameters for</td>
                                     <td>Number of Subscribers</td>
                                 </tr>
                             </thead>
@@ -290,10 +291,10 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <td></td>
-                                    <td>View Counts</td>
-                                    <td>Like Counts</td>
-                                    <td>Dislike Counts</td>
+                                    <td>Parameters for</td>
+                                    <td>Views Count</td>
+                                    <td>Likes Count</td>
+                                    <td>Dislikes Count</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -408,14 +409,51 @@
                         <br/>
                         <div id="plot3"></div>
                         This distribution shows that the vast majority of video titles use no capitalization at all.
-                        <br/>
+                        <a class="ols" onclick="trigger('.overlay.ols2')">See OLS summary</a>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Parameters for</td>
+                                    <td>Views count (log)</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intercept</td>
+                                    <td>8.2126</td>
+                                </tr>
+                                <tr>
+                                    <td>Number of words in title</td>
+                                    <td>0.0358</td>
+                                </tr>
+                                <tr>
+                                    <td>Frequency of capitalized words in title</td>
+                                    <td>0.4580</td>
+                                </tr>
+                                <tr>
+                                    <td>R&#xB2;</td>
+                                    <td>0.007</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj. R&#xB2;</td>
+                                    <td>0.007</td>
+                                </tr>
+                                <tr>
+                                    <td>No. obs.</td>
+                                    <td>3139185</td>
+                                </tr>
+                            </tbody>
+                        </table>
                         However, our model shows that the frequency to capitalize words is significant and it increases the number of views on a video. Furthermore, the number of words in a title is significant. Nevertheless, it does not seem to have a real impact on the number of views.
+                        <br/>
+                        You can also check here the model for small channels (< 50,000 subscribers) like you will have at the beginning! &#x1F609;
+                        <a class="ols" onclick="trigger('.overlay.ols3')">See OLS summary</a>
                     </div>
                 </div>
                 <div id="brother" class="brother response">
                     <img src="resources/brother.png" class="avatar-brother">
                     <div class="msg">
-                        And what about capitalize words in titles?
+                        Is there a difference between small and big channels?
                     </div>
                 </div>
                 <div id="us" class="us response">
@@ -431,13 +469,20 @@
                 <div id="brother" class="brother response">
                     <img src="resources/brother.png" class="avatar-brother">
                     <div class="msg">
-                        What are the most common topics in each of the chosen category?
+                        What are the most common topics in the category?
                     </div>
                 </div>
                 <div id="us" class="us response">
                     <img src="resources/scientist.png" class="avatar-scientist">
                     <div class="msg">
+                        To get a better understanding of the topics within the categories, we look for common topics in the tags of each video from gaming channels. Therefore, we first created a function that would detect them by removing stop words, lemmatization, filtering out rare and frequent words and adding bigrams.
                         <img src="resources/tags_controller.png">
+                        <div class="comment">
+                            Cloud of words with the most used tags in gaming videos
+                        </div>
+                        <p></p>
+                        This is very important to consider while trying to work your way from the bottom up. What other topics are promoted together in titles or tags by successful gaming channels? See for yourself:
+                        <p></p>
                         <object type="text/html" data="tags.html" width="100%" height="880"></object>
                     </div>
                 </div>
@@ -450,6 +495,41 @@
                 <div id="us" class="us response">
                     <img src="resources/scientist.png" class="avatar-scientist">
                     <div class="msg">
+                        We have seen that YouTube Gamers also branch out into other areas. As mentioned earlier, the gaming industry is still gaining momentum and brand placements become more and more important. This lead us to the question whether having a broader variety of videos increases a channel’s success since it appeals to a broader audience. 
+                        <div id="plot6"></div>
+                        <br/>
+                        We see however, that channels that list multiple categories do not necessarily have more subscriptions. From our model we see that sticking to only gaming is what the gaming audience is looking for. If you are a gamer and you want to become successful, stick to what you know and do not hassle to reinvent yourself!
+                        <a class="ols" onclick="trigger('.overlay.ols4')">See OLS summary</a>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Parameters for</td>
+                                    <td>Subscribers count (log)</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intercept</td>
+                                    <td>10.6935</td>
+                                </tr>
+                                <tr>
+                                    <td>Only Gaming</td>
+                                    <td>0.1444</td>
+                                </tr>
+                                <tr>
+                                    <td>R&#xB2;</td>
+                                    <td>0.003</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj. R&#xB2;</td>
+                                    <td>0.003</td>
+                                </tr>
+                                <tr>
+                                    <td>No. obs.</td>
+                                    <td>14380</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -472,7 +552,25 @@
         <div class="popup2">
             <p class="close" onclick="trigger('.overlay.ols2')">&times;</p>
             <div class="content2">
-                <img src="resources/ols1.png">
+                <img src="resources/ols2.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay ols3">
+        <div class="popup2">
+            <p class="close" onclick="trigger('.overlay.ols3')">&times;</p>
+            <div class="content2">
+                <img src="resources/ols3.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay ols4">
+        <div class="popup2">
+            <p class="close" onclick="trigger('.overlay.ols4')">&times;</p>
+            <div class="content2">
+                <img src="resources/ols4.png">
             </div>
         </div>
     </div>
