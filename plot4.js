@@ -61,10 +61,12 @@ function plot4() {
             showgrid: false,
             zeroline: false,
             autorange: true,
+            automargin: true
         },
         yaxis: {
             title: 'Number of videos',
             autorange: true,
+            automargin: true
         },
         font: {size:12 , color: 'black'}, 
         paper_bgcolor: '#e4e4e4',

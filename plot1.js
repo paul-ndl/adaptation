@@ -43,7 +43,8 @@ function plot1() {
         annotations: [],
         xaxis: {
             ticks: '',
-            title: 'Category'
+            title: 'Category',
+            automargin: true
         },
         yaxis: {
             ticks: '',
@@ -51,7 +52,8 @@ function plot1() {
             width: 700,
             height: 700,
             autosize: false,
-            title: 'Compound sentiment score'
+            title: 'Compound sentiment score',
+            automargin: true
         },
         font: {size:12 , color: 'black'}, 
         paper_bgcolor: '#e4e4e4',

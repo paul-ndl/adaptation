@@ -11,4 +11,5 @@ window.onload=function(){
     plot4();
     plot5();
     plot6();
+    plot7();
 }

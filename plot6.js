@@ -29,10 +29,12 @@ function plot6() {
         title: 'Number of videos per categories (except Gaming topic) for Gaming channels',
         annotations: [],
         xaxis: {
-            title: 'Category'
+            title: 'Category',
+            automargin: true
         },
         yaxis: {
-            title: 'Number of videos'
+            title: 'Number of videos',
+            automargin: true
         },
         font: {size:12 , color: 'black'}, 
         paper_bgcolor: '#e4e4e4',
