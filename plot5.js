@@ -4,7 +4,7 @@ function plot5() {
 
     var gd5 = d5.select("div[id='plot5']")
     .style({
-        'width': '50%',
+        'width': '100%',
         'margin-top': '3vh',
         'display': 'block',
         'margin-left': 'auto',

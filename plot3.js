@@ -4,7 +4,7 @@ function plot3() {
 
     var gd3 = d3.select("div[id='plot3']")
     .style({
-        'width': '50%',
+        'width': '100%',
         'margin-top': '3vh',
         'display': 'block',
         'margin-left': 'auto',

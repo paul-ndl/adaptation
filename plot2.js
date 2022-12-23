@@ -3,7 +3,7 @@ function plot2() {
 
     var gd2 = d2.select("div[id='plot2']")
     .style({
-        'width': '50%',
+        'width': '100%',
         'margin-top': '3vh',
         'display': 'block',
         'margin-left': 'auto',

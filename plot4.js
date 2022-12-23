@@ -4,7 +4,7 @@ function plot4() {
 
     var gd4 = d4.select("div[id='plot4']")
     .style({
-        'width': '50%',
+        'width': '100%',
         'margin-top': '3vh',
         'display': 'block',
         'margin-left': 'auto',

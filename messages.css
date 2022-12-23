@@ -105,6 +105,13 @@
     padding: 10px;
 }
 
+.msg .comment
+{
+    text-align: center;
+    font-style: italic;
+    font-size: 12;
+}
+
 .avatar-brother
 {
     left: -60px;

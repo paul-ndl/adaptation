@@ -3,7 +3,7 @@ function plot0() {
 
     var gd0 = d0.select("div[id='plot0']")
     .style({
-        'width': '50%',
+        'width': '100%',
         'margin-top': '3vh',
         'display': 'block',
         'margin-left': 'auto',
