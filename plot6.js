@@ -26,7 +26,7 @@ function plot6() {
     ];
       
     var layout6 = {
-        title: 'Number of videos per categories (except Gaming topic) for Gaming channels',
+        title: 'Number of videos per categories (except gaming topic) for gaming channels',
         annotations: [],
         xaxis: {
             title: 'Category',

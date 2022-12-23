@@ -16,29 +16,29 @@ function plot7() {
 
     var data7 = [
         {   
-            lowerfence: [1.000000e+04],
-            q1: [1.819700e+04],
-            median: [3.790000e+04],
-            q3: [1.140000e+05],
-            upperfence: [1.460000e+07],
+            lowerfence: [5598],
+            q1: [16147],
+            median: [75950],
+            q3: [225864],
+            upperfence: [460743],
             type: 'box',
             name: 'Only gaming topics',
-            boxpoints: 'none'
+            boxpoints: 'all'
         },
         {   
-            lowerfence: [1.000000e+04],
-            q1: [1.633225e+04],
-            median: [3.180000e+04],
-            q3: [9.037500e+04],
-            upperfence: [3.870000e+05],
+            lowerfence: [8782],
+            q1: [14749],
+            median: [61087],
+            q3: [287587],
+            upperfence: [287587],
             type: 'box',
             name: 'Not only gaming topics',
-            boxpoints: 'none'
-        },
+            boxpoints: 'all'
+        }
     ];
       
     var layout7 = {
-        title: 'Distribution of videos by topics',
+        title: 'Distribution of suscribers for channels with focus on gaming vs diversity',
         boxmode: 'group',
         xaxis: {
             title: '',
@@ -50,6 +50,7 @@ function plot7() {
     };
       
     Plotly.newPlot(my_Div7, data7, layout7);
+    Plotly.restyle(my_Div7, 'boxpoints', 'none');
     		
     window.onresize = function() { Plotly.Plots.resize(my_Div7) };
 }

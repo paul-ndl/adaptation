@@ -54,7 +54,7 @@ function plot4() {
     var data4 = [trace1, trace2];
 
     var layout4 = {
-        title:'Number of videos per view range (150M to 179M)', 
+        title:'Number of videos per view range (1.5M to 1.8M)', 
         barmode: "group",
         xaxis: {
             title: 'View count', 

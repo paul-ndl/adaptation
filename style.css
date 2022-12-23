@@ -193,6 +193,13 @@ section
     height: 250px;
 }
 
+.cover3
+{
+    margin-top: 50px;
+    width: 400px;
+    height: 450px;
+}
+
 .banner
 {
     min-height: 100vh;
@@ -289,10 +296,10 @@ section
     text-align: center;
 }
 
-.intro .title p
+.intro .title p, .conclusion .title p
 {
     text-align: left;
-    margin-top: 5px;
+    margin-top: 50px;
 }
 
 .title h2:before
@@ -490,6 +497,13 @@ footer .footerMenu li a:hover
         padding-top: 30px;
         width: 200px;
         height: 150px;
+    }
+
+    .cover3
+    {
+        margin-top: 50px;
+        width: 200px;
+        height: 225px;
     }
 
     .team .people 

@@ -24,7 +24,7 @@ function plot3() {
       ];
 
     var layout3 = {
-        title:'Distribution of the frequency of capitalize words', 
+        title:'Distribution of the frequency of capitalized words', 
         barmode: "stack",
         xaxis: {
             title: 'Frequency of upper words', 
