@@ -3,8 +3,9 @@ function plot1() {
 
     var gd1 = d1.select("div[id='plot1']")
     .style({
-        'width': '50%',
+        'width': '100%',
         'margin-top': '3vh',
+        'margin-bottom': '3vh',
         'display': 'block',
         'margin-left': 'auto',
         'margin-right': 'auto',
@@ -26,13 +27,14 @@ function plot1() {
                     [0.07, 0.06, 0.06, 0.07, 0.06, 0.07, 0.09, 0.06, 0.03, 0.05, 0.07, 0.06, 0.1, 0.08, 0.05],
                     [0.02, 0.02, 0.01, 0.02, 0.01, 0.02, 0.02, 0.01, 0.01, 0.02, 0.02, 0.01, 0.02, 0.02, 0.01]];
 
+    var colorscaleValue = [[0, '#8c29ea'], [1, '#ea7b29']];
 
     var data1 = [{
         x: xValues,
         y: yValues,
         z: zValues,
         type: 'heatmap',
-        showscale: false
+        colorscale: colorscaleValue
     }];
 
 

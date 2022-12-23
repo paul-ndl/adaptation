@@ -400,6 +400,12 @@ footer .footerMenu li a:hover
     letter-spacing: 1px;
 }
 
+.ols
+{
+    cursor: pointer;
+    color: blue;
+}
+
 .overlay
 {
 	position: fixed;
@@ -414,7 +420,7 @@ footer .footerMenu li a:hover
     z-index: 1000;
 }
 
-.overlay:target
+.overlay.active
 {
 	visibility: visible;
 	opacity: 1;
@@ -454,6 +460,7 @@ footer .footerMenu li a:hover
 	font-weight: bold;
 	text-decoration: none;
 	color: #333;
+    cursor: pointer;
 }
 
 @media (max-width: 991px) 

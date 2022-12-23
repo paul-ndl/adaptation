@@ -15,7 +15,7 @@ function plot5() {
 
     var allLabels = ['Lower titles', 'Upper titles'];
     var allValues = [[79.40, 20.60], [72.75, 27.25]];
-    var ultimateColors = ['rgb(36, 73, 147)', 'rgb(175, 49, 35)']
+    var ultimateColors = ['#8c29ea', '#ea7b29']
     
     var data5 = [
         {
@@ -53,7 +53,7 @@ function plot5() {
 
     var layout5 = {
         title:'Percentage of lower vs upper titles for both small and big channels',
-        grid: {rows: 2, columns: 2},
+        grid: {rows: 1, columns: 2},
         font: {size:12 , color: 'black'}, 
         paper_bgcolor: '#e4e4e4',
         plot_bgcolor: '#e4e4e4'

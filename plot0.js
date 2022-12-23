@@ -22,6 +22,9 @@ function plot0() {
             start: -1,  // start of the x range
             end: 1,  // end of the x range
             size: 0.1  // size of the x bins
+          },
+          marker: {
+            color: '#ec5046'
           }
         }
     ];

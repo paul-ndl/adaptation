@@ -26,7 +26,10 @@ function plot4() {
             179, 123, 135, 123, 138, 121, 140, 109, 112, 107, 109, 122, 116,
             122, 113, 111, 106],
         name: 'Lower title',
-        type: 'bar'
+        type: 'bar',
+        marker: {
+            color: '#8c29ea'
+        }
     };
       
     var trace2 = {
@@ -42,7 +45,10 @@ function plot4() {
             83,  76,  84,  82,  68,  73,  74,  81,  79,  74,  61,  71,  79,
             78,  73,  73,  75],
         name: 'Upper title',
-        type: 'bar'
+        type: 'bar',
+        marker: {
+            color: '#ea7b29'
+        }
     };
     
     var data4 = [trace1, trace2];
