@@ -4,8 +4,10 @@ function toggleMenu(){
 }
 
 window.onload=function(){
+    plot0();
     plot1();
     plot2();
     plot3();
     plot4();
+    plot5();
 }

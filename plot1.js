@@ -3,9 +3,11 @@ function plot1() {
 
     var gd1 = d1.select("div[id='plot1']")
     .style({
-        'width': '100%',
+        'width': '50%',
         'margin-top': '3vh',
-        'margin-bottom': '5vh'
+        'display': 'block',
+        'margin-left': 'auto',
+        'margin-right': 'auto',
     });
 
     var my_Div1 = gd1.node();

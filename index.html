@@ -11,10 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="script.js"></script>
+    <script src="plot0.js"></script>
     <script src="plot1.js"></script>
     <script src="plot2.js"></script>
     <script src="plot3.js"></script>
     <script src="plot4.js"></script>
+    <script src="plot5.js"></script>
 </head>
 
 <body>
@@ -90,6 +92,8 @@
                             </li>
                         </ul>
                         What this specifically tells us is that a higher upload frequency of videos may not lead to more subscribers. A similar trend can be observed with video length. If a channel uploads a lot of videos that are extremely long, they most likely will not gain subscribers in this way. As already mentioned above, YouTube gaming content is usually highlights or summaries by gamers but not necessarily an entire recorded live stream of their game, where other platforms are preferred.
+                        
+                        <a href='#ols1'>See OLS summary</a>
                         <br/>
                         <table>
                             <thead>
@@ -200,7 +204,7 @@
                     <img src="resources/scientist.png" class="avatar-scientist">
                     <div class="msg">
                         The way we phrase titles and what kind of language we use will either speak to a desired audience or it may drive them away. To inform you about the do’s and don’ts in your video titles, we analyzed titles sentiments, meaning an attitude or thought that is prompted by feeling.
-                        <img src="resources/hist.png">
+                        <div id="plot0"></div>
                         What we found was, that at least in the gaming world, most videos appear to use neutral language. Neither positive nor negative words had a significant impact on view counts of such videos. 
                         <br/>
                         Let's now look closer at this by category of videos, since many channels also have videos from categories other than "Gaming".
@@ -369,6 +373,8 @@
                         <div id="plot3"></div>
                         <br/>
                         <div id="plot4"></div>
+                        <br/>
+                        <div id="plot5"></div>
                     </div>
                 </div>
                 <div id="brother" class="brother response">
@@ -391,9 +397,7 @@
                 <div id="us" class="us response">
                     <img src="resources/scientist.png" class="avatar-scientist">
                     <div class="msg">
-                        <img src="resources/gaming_titles.png">
-                        <object type="text/html" data="titles.html" width="100%" height="880"></object>
-                        <img src="resources/gaming_tags.png">
+                        <img src="resources/tags_controller.png">
                         <object type="text/html" data="tags.html" width="100%" height="880"></object>
                     </div>
                 </div>
@@ -413,6 +417,16 @@
 
         </div>
     </section>
+
+    <!-- Overlay OLS graphs -->
+    <div id="ols1" class="overlay">
+        <div class="popup2">
+            <a class="close" href="#analysis">&times;</a>
+            <div class="content2">
+                <img src="resources/ols1.png">
+            </div>
+        </div>
+    </div>
 
     <!-- Key numbers -->
     <section class="numbers" id="numbers">

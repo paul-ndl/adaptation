@@ -400,6 +400,62 @@ footer .footerMenu li a:hover
     letter-spacing: 1px;
 }
 
+.overlay
+{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity:0;
+    z-index: 1000;
+}
+
+.overlay:target
+{
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup2
+{
+	margin: 50px auto;
+	padding: 30px 50px 30px 50px;
+	background: #fff;
+	border-radius: 5px;
+	width: 70%;
+	position:relative;
+	transition: all 0.1s ease-in-out;
+}
+
+.popup2 .content2
+{
+	max-height: 30%;
+	overflow: auto;
+}
+
+.popup2 .content2 img 
+{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.popup2 .close
+{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
 @media (max-width: 991px) 
 {
     header
